@@ -6,12 +6,16 @@
     <title>HTML5 Video Player</title>
     <link href="https://fonts.googleapis.com/css?family=Arimo|Droid+Sans:500|Pacifico" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+    <link href="css/mediaelementplayer.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   </head>
 <body>
   <div class="wrapper">
     <div class="videoWrapper">
       <video controls>
+        <source src="video/p6smallvideo.mv4" type="video/mp4">
         <source src="video/video.mp4" type="video/mp4">
         <source src="video/video.ogg" type="video/ogg">
       </video>
@@ -26,6 +30,11 @@
 
 
 </div>
-
+<script>
+      $('video').mediaelementplayer({
+        features: ['playpause', 'tracks', 'progress',],
+        startLanguage: 'en'
+      });
+    </script>
 </body>
 </html>
