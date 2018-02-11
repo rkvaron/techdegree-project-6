@@ -1,0 +1,51 @@
+// ==========================================================================
+// MIXINS styles
+// ==========================================================================
+
+
+//Media query mixin
+@mixin mq($break) {
+  @if $break == 'small' {
+    @media (max-width: $brkpoint--md) {
+      @content;
+    }
+  }
+  @else if $break == 'medium' {
+    @media (min-width: $brkpoint--md + 1) {
+      @content;
+    }
+  }
+  @else if $break == 'large' {
+    @media (min-width: $brkpoint--lg) {
+      @content;
+    }
+  }
+  @else {
+    @error "No value could be retrieved for `#{$break}`. "
+  }
+}
+
+
+// Flexbox settings
+
+@mixin flexbox($display: flex,  $flex-direction: null, $flex-wrap: null, $justify-content: null,) {
+  display: $display;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+}
+
+//Element and Modifier BEM Selectors
+
+@mixin e($element){
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier){
+  &--#{$modifier} {
+    @content;
+  }
+}
+

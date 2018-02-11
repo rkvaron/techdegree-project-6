@@ -1,0 +1,53 @@
+// ==========================================================================
+// EXTENDS styles
+// ==========================================================================
+
+// Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// TEXT related- Headlines and paragraphs
+
+%centertext {
+  text-align: center;
+}
+
+%text {
+  font-size: $base__font-size;
+  font-family: $font-stack--primary;
+  line-height: ($base__line/$base__font-size);
+}
+
+//Images & Elements
+%center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%spaceafter {
+  margin-bottom: em(20px);
+}
+
+%theme {
+  border-radius: $br--default;
+  color: $white;
+  padding: .75em;
+  margin: .2em 0;
+}
+
+
+//Links
+%link {
+  color: $color-secondary;
+  text-decoration: none;
+  font-weight: $font-weight--bold;
+}
+
+/*end extends*/

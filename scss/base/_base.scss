@@ -1,0 +1,49 @@
+// ==========================================================================
+// BASE Styles
+// ==========================================================================
+
+* {
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack--primary;
+  line-height: 1.5;
+  color: #888;
+  text-align: left;
+  font-size: 16px;
+}
+
+p {
+  @extend %text;
+  color: palette(grey, dark);
+  font-size: 1em;
+  margin-bottom: 1.5em;
+  padding: 0 1em;
+  @include mq(medium) {
+    padding: 0;
+  }
+}
+
+h1, h3 {
+  font-family: $font-stack--primary;
+  color: palette(grey, dark);
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+.wrapper {
+  width: 100%;
+  @include mq(medium) {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 760px;
+  }
+  @include mq(large) {
+    margin: 0 auto;
+  }
+}
