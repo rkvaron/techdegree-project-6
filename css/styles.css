@@ -44,7 +44,8 @@ a {
       margin: 0 auto; } }
 
 .videoWrapper {
-  max-width: 100%; }
+  max-width: 760px;
+  margin: 0 auto; }
 
 .transcript {
   padding: 1em; }
