@@ -26,6 +26,14 @@ p {
   }
 }
 
+span {
+  color: #000000;
+}
+
+.highlight {
+  color: #FFA500;
+}
+
 h1, h3 {
   font-family: $font-stack--primary;
   color: palette(grey, dark);
