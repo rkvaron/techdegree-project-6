@@ -10,8 +10,7 @@ video.addEventListener('timeupdate', () => {
     let dataStart = spans[i].getAttribute('data-start');
     let dataEnd = spans[i].getAttribute('data-end');
 
-      if(dataStart < currentTime && currentTime < dataEnd) {
-        console.log('orange');
+      if(dataStart <= currentTime && currentTime < dataEnd) {
         spans[i].style.color = '#FFA500';
       } else if(currentTime = dataEnd){
         spans[i].style.color = '#000000';
